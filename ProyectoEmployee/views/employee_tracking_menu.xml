@@ -1,0 +1,10 @@
+<odoo>
+    <!-- Menú principal -->
+    <menuitem id="menu_tracking_main" name="Seguimiento de Empleados" sequence="10"/>
+
+    <!-- Submenús -->
+    <menuitem id="menu_employee_worklog" name="Registro de Horas" parent="menu_tracking_main" action="action_employee_worklog"/>
+
+    <menuitem id="menu_employee_ranking" name="Ranking de Empleados" parent="menu_tracking_main" action="action_employee_ranking"/>
+</odoo>
+

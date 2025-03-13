@@ -1,0 +1,24 @@
+<odoo>
+    <!-- Vista Tree para el Ranking de Empleados -->
+    <record id="view_employee_ranking_tree" model="ir.ui.view">
+        <field name="name">tracking.employee.ranking.tree</field>
+        <field name="model">tracking.employee.ranking</field>
+        <field name="arch" type="xml">
+            <tree string="Ranking de Empleados">
+                <field name="employee_id"/>
+                <field name="efficiency"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción para acceder al Ranking -->
+    <record id="action_employee_ranking" model="ir.actions.act_window">
+        <field name="name">Ranking de Empleados</field>
+        <field name="res_model">tracking.employee.ranking</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p>Aquí puedes ver el ranking de empleados según su eficiencia.</p>
+        </field>
+    </record>
+</odoo>
+

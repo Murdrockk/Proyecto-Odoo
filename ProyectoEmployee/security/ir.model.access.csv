@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tracking_employee_worklog,access_tracking_employee_worklog,model_tracking_employee_worklog,,1,1,1,1
+access_tracking_employee_ranking,access_tracking_employee_ranking,model_tracking_employee_ranking,,1,1,1,1
+access_hr_employee,access_hr_employee,model_hr_employee,,1,1,1,1

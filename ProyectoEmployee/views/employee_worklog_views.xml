@@ -1,0 +1,46 @@
+<odoo>
+    <!-- Vistas para el modelo tracking.employee.worklog (Registro de Horas de Trabajo) -->
+    
+    <record id="view_employee_worklog_tree" model="ir.ui.view">
+        <field name="name">tracking.employee.worklog.tree</field>
+        <field name="model">tracking.employee.worklog</field>
+        <field name="arch" type="xml">
+            <tree string="Registros de Horas de Trabajo">
+                <field name="employee_id"/>
+                <field name="date"/>
+                <field name="hours_worked"/>
+                <field name="tasks_completed"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_employee_worklog_form" model="ir.ui.view">
+        <field name="name">tracking.employee.worklog.form</field>
+        <field name="model">tracking.employee.worklog</field>
+        <field name="arch" type="xml">
+            <form string="Registro de Horas de Trabajo">
+                <sheet>
+                    <group>
+                        <field name="employee_id" required="1"/>
+                        <field name="date" required="1"/>
+                        <field name="hours_worked" required="1"/>
+                        <field name="tasks_completed"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para acceder a las vistas -->
+    <record id="action_employee_worklog" model="ir.actions.act_window">
+        <field name="name">Registros de Horas de Trabajo</field>
+        <field name="res_model">tracking.employee.worklog</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>
+                Aquí puedes registrar las horas trabajadas y las tareas completadas por cada empleado.
+            </p>
+        </field>
+    </record>
+</odoo>
+
